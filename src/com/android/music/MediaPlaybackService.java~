@@ -668,10 +668,10 @@ public class MediaPlaybackService extends Service {
         i.putExtra("artist", getArtistName());
         i.putExtra("album",getAlbumName());
         i.putExtra("track", getTrackName());
-        sendStickyBroadcast(i);
+        sendBroadcast(i);
         
         if (what.equals(QUEUE_CHANGED)) {
-            saveQueue(true);senbroadcast
+            saveQueue(true);
         } else {
             saveQueue(false);
         }
